@@ -1,4 +1,24 @@
 import type { Config } from "tailwindcss";
+import plugin from 'tailwindcss/plugin';
+import type { CSSRuleObject } from 'tailwindcss/types/config';
+
+const scrollbarPlugin = plugin(function ({ addUtilities }) {
+  const scrollbarUtilities: { [key: string]: CSSRuleObject } = {
+    '.scrollbar': {
+      '&::-webkit-scrollbar': {
+        backgroundColor: 'transparent',
+        height: '10px',
+        width: '10px',
+      },
+      '&::-webkit-scrollbar-thumb': {
+        backgroundColor: 'red',
+      },
+    },
+  };
+
+  // Add the custom scrollbar utilities
+  addUtilities(scrollbarUtilities,);
+});
 
 export default {
   content: [
@@ -14,5 +34,5 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [scrollbarPlugin],
 } satisfies Config;
