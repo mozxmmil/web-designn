@@ -7,13 +7,13 @@ const Slider = () => {
         <h1>treadling</h1>
       </div>
       <div className="elem1 w-1/2 h-full  flex-shrink-0  flex justify-center items-center font-medium text-6xl capitalize font-serif">
-        <h1>treadling</h1>
+        <h1>Light</h1>
       </div>
       <div className="elem1 w-1/2 h-full  flex-shrink-0  flex justify-center items-center font-medium text-6xl capitalize font-serif">
-        <h1>treadling</h1>
+        <h1>Fassion</h1>
       </div>
       <div className="elem1 w-1/2 h-full  flex-shrink-0  flex justify-center items-center font-medium text-6xl capitalize font-serif">
-        <h1>treadling</h1>
+        <h1>Marvels</h1>
       </div>
     </div>
   );
