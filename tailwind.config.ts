@@ -28,6 +28,19 @@ export default {
   ],
   theme: {
     extend: {
+      keyframes:{
+        rotate:{
+          from:{
+            left:"0%"
+          },
+          to :{
+            right:"100%"
+          }
+        }
+      },
+      animation:{
+        nope:'rotate '
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
