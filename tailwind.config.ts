@@ -29,7 +29,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        Gilroy_R :["var(--Gilroy-R)","sans-serif"],
+        Gilroy_R: ["var(--Gilroy-R)", "sans-serif"],
         gilroy_M: ["var(--Gilroy-M)", "sans-serif"], // Reference the font name from @font-face
         monument: ["var(--Monument)", "sans-serif"], // Reference the font name from @font-face
       },
@@ -42,9 +42,18 @@ export default {
             right: "100%",
           },
         },
+        slider: {
+          from: {
+            transform: "translateX(0%)",
+          },
+          to: {
+            transform: "translateX(-100%)",
+          },
+        },
       },
       animation: {
         nope: "rotate ",
+        slider: "slider 10s linear infinite",
       },
       colors: {
         background: "var(--background)",
