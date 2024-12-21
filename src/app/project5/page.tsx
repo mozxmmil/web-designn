@@ -1,4 +1,4 @@
-import { Alphabet, ImageSlider } from "@/utils/SliderImage";
+import { Alphabet, HoverList, ImageSlider } from "@/utils/SliderImage";
 import Image from "next/image";
 import React from "react";
 import { GoArrowRight } from "react-icons/go";
@@ -48,13 +48,14 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section className="w-full h-screen ">
-        <div className="slider  w-full h-[30%] flex items-center gap-10 flex-nowrap overflow-x-hidden">
-          <div className="slider-content flex gap-10 animate-slider">
-            {ImageSlider.map((val, index) => (
+      <section className="w-full h-screen  "> 
+        {/* todo: i have to fix this slider bug tomorrow */}
+        <div className="slider w-full h-[30%] flex items-center gap-10 whitespace-nowrap overflow-hidden animate-slider">
+          <div className="flex">
+            {[...ImageSlider, ...ImageSlider].map((val, index) => (
               <div
                 key={index}
-                className="circle h-32 w-32 bg-yellow-500 rounded-full relative overflow-hidden "
+                className="circle h-32 w-32 transition-all duration-200 ease-linear bg-yellow-500 rounded-full shrink-0 relative overflow-hidden"
               >
                 <Image
                   src={val.url}
@@ -63,16 +64,6 @@ const page = () => {
                   className="object-cover"
                   quality={20}
                 />
-              </div>
-            ))}
-          </div>
-          <div className="slider-content flex gap-10 animate-slider">
-            {ImageSlider.map((val, index) => (
-              <div
-                key={index}
-                className="circle h-32 w-32 bg-yellow-500 rounded-full relative overflow-hidden "
-              >
-                <Image src={val.url} alt="not" fill className="object-cover" />
               </div>
             ))}
           </div>
@@ -113,7 +104,7 @@ const page = () => {
                 quality={20}
               />
             </div>
-            <div className="bottom flex w-full justify-between  py-5 bg-slate-500 ">
+            <div className="bottom flex w-full justify-between  py-5  ">
               <h1 className="font-gilroy_M text-xl font-bold ">
                 Hannah Mother <br /> features in a <br /> fashion store by{" "}
                 <br /> the lake for <br /> vogue new shot
@@ -126,7 +117,54 @@ const page = () => {
             </div>
           </div>
         </div>
-        <div className="thirdPage w-full h-screen bg-yellow-50"></div>
+        <div className="thirdPage w-full h-fit  px-10 bg-yellow-50">
+          <h1 className="w-full  text-center font-monument text-6xl mb-16 uppercase">
+            Update
+          </h1>
+          {HoverList.map((value, index) => (
+            <div
+              key={index}
+              className="updateSection w-full h-[15vh] group hover:bg-yellow-100  transition-colors  duration-300 ease-out border-t-2 border-black flex justify-between items-center px-5 relative"
+            >
+              <div className="w-[110px] h-[110px] left-[10%] group-hover:opacity-100 opacity-0 transition-all ease-in-out group-hover:left-[20%] rounded-full overflow-hidden  absolute duration-500 ">
+                <Image
+                  src={value.photo}
+                  className="  object-cover "
+                  fill
+                  quality={50}
+                  alt="note"
+                />
+              </div>
+
+              <h1 className=" w-[5%] font-Gilroy_R font-bold tracking-wide uppercase">
+                {value.name}
+              </h1>
+              <div className="0 w-1/2 font-medium text-5xl font-gilroy_M">
+                <h1 className="font-bold">{value.tag}</h1>
+                <h5 className="text-sm">{value.date}</h5>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="fourthPage w-full h-screen bg-yellow-50  border-black pt-[0.1px] ">
+          <div className="slider whitespace-nowrap overflow-x-hidden overflow-y-hidden p-5 border-black border-t-2 border-b-2 mt-10">
+            <h1 className="inline-block animate-slider1 mr-10 text-7xl  font-monument text-stroke text-transparent  ">
+              premier model 2024
+            </h1>
+            <h1 className="inline-block animate-slider1  mr-10 text-7xl  font-monument text-stroke text-transparent  ">
+              premier model 2024
+            </h1>
+            <h1 className="inline-block animate-slider1  mr-10 text-7xl  font-monument text-stroke text-transparent  ">
+              premier model 2024
+            </h1>
+            <h1 className="inline-block animate-slider1  mr-10 text-7xl  font-monument text-stroke text-transparent  ">
+              premier model 2024
+            </h1>
+            <h1 className="inline-block animate-slider1  mr-10 text-7xl  font-monument text-stroke text-transparent  ">
+              premier model 2024
+            </h1>
+          </div>
+        </div>
       </section>
     </main>
   );

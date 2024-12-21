@@ -14,6 +14,9 @@ const scrollbarPlugin = plugin(function ({ addUtilities }) {
         backgroundColor: "red",
       },
     },
+    ".text-stroke": {
+      "-webkit-text-stroke": "2px black",
+    },
   };
 
   // Add the custom scrollbar utilities
@@ -43,17 +46,18 @@ export default {
           },
         },
         slider: {
-          from: {
-            transform: "translateX(0%)",
-          },
-          to: {
-            transform: "translateX(-100%)",
-          },
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+        slider1: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(calc(-100% - 40px))" },
         },
       },
       animation: {
         nope: "rotate ",
         slider: "slider 10s linear infinite",
+        slider1: "slider1 10s linear infinite",
       },
       colors: {
         background: "var(--background)",
