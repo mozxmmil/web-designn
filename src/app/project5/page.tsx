@@ -1,4 +1,6 @@
-import { Alphabet, HoverList, ImageSlider } from "@/utils/SliderImage";
+import Slider2 from "@/components/Slider2";
+import Slider3 from "@/components/Slider3";
+import { Alphabet, HoverList } from "@/utils/SliderImage";
 import Image from "next/image";
 import React from "react";
 import { GoArrowRight } from "react-icons/go";
@@ -48,26 +50,10 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section className="w-full h-screen  "> 
+      <section className="w-full h-screen  ">
         {/* todo: i have to fix this slider bug tomorrow */}
-        <div className="slider w-full h-[30%] flex items-center gap-10 whitespace-nowrap overflow-hidden animate-slider">
-          <div className="flex">
-            {[...ImageSlider, ...ImageSlider].map((val, index) => (
-              <div
-                key={index}
-                className="circle h-32 w-32 transition-all duration-200 ease-linear bg-yellow-500 rounded-full shrink-0 relative overflow-hidden"
-              >
-                <Image
-                  src={val.url}
-                  alt="not"
-                  fill
-                  className="object-cover"
-                  quality={20}
-                />
-              </div>
-            ))}
-          </div>
-        </div>
+        <Slider2 />
+
         <div className="alphabet  font-Gilroy_R font-bold w-full h-[15%]  border-t-2 border-b-2 border-black flex items-center gap-10 justify-between px-5 ">
           <h1 className="text-3xl underline tracking-[6px]">All</h1>
           {Alphabet.map((value, index) => (
@@ -147,23 +133,7 @@ const page = () => {
           ))}
         </div>
         <div className="fourthPage w-full h-screen bg-yellow-50  border-black pt-[0.1px] ">
-          <div className="slider whitespace-nowrap overflow-x-hidden overflow-y-hidden p-5 border-black border-t-2 border-b-2 mt-10">
-            <h1 className="inline-block animate-slider1 mr-10 text-7xl  font-monument text-stroke text-transparent  ">
-              premier model 2024
-            </h1>
-            <h1 className="inline-block animate-slider1  mr-10 text-7xl  font-monument text-stroke text-transparent  ">
-              premier model 2024
-            </h1>
-            <h1 className="inline-block animate-slider1  mr-10 text-7xl  font-monument text-stroke text-transparent  ">
-              premier model 2024
-            </h1>
-            <h1 className="inline-block animate-slider1  mr-10 text-7xl  font-monument text-stroke text-transparent  ">
-              premier model 2024
-            </h1>
-            <h1 className="inline-block animate-slider1  mr-10 text-7xl  font-monument text-stroke text-transparent  ">
-              premier model 2024
-            </h1>
-          </div>
+          <Slider3 />
         </div>
       </section>
     </main>

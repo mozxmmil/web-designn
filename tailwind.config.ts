@@ -47,11 +47,11 @@ export default {
         },
         slider: {
           "0%": { transform: "translateX(0%)" },
-          "100%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(calc(-100% - 24px))" },
         },
         slider1: {
           "0%": { transform: "translateX(0%)" },
-          "100%": { transform: "translateX(calc(-100% - 40px))" },
+          "100%": { transform: "translateX(calc(-100% - 44px))" },
         },
       },
       animation: {
