@@ -17,6 +17,11 @@ const scrollbarPlugin = plugin(function ({ addUtilities }) {
     ".text-stroke": {
       "-webkit-text-stroke": "2px black",
     },
+    ".SliderAlphabet": {
+      "&::-webkit-scrollbar": {
+        backgroundColor: "transparent",
+      },
+    },
   };
 
   // Add the custom scrollbar utilities

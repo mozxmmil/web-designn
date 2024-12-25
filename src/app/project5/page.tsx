@@ -15,7 +15,7 @@ const page = () => {
       <section className="w-full md:h-[84.5vh]  bg-yellow-50 md:p-14 relative h-[50vh] pt-10">
         <InnderDiv />
       </section>
-      <section className="w-full h-screen  ">
+      <section className="w-full   relative ">
         <Slider2 />
         <AlphabetSlider />
         <ImageAndtextSection />
