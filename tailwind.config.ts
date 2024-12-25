@@ -34,7 +34,8 @@ export default {
       fontFamily: {
         Gilroy_R: ["var(--Gilroy-R)", "sans-serif"],
         gilroy_M: ["var(--Gilroy-M)", "sans-serif"], // Reference the font name from @font-face
-        monument: ["var(--Monument)", "sans-serif"], // Reference the font name from @font-face
+        monument: ["var(--Monument)", "sans-serif"],
+        monument_R: ["var(--monumentRegular)", "sans-serif"], // Reference the font name from @font-face
       },
       keyframes: {
         rotate: {
@@ -53,11 +54,16 @@ export default {
           "0%": { transform: "translateX(0%)" },
           "100%": { transform: "translateX(calc(-100% - 44px))" },
         },
+        Toggle: {
+          "0": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(0%)" },
+        },
       },
       animation: {
         nope: "rotate ",
         slider: "slider 10s linear infinite",
         slider1: "slider1 10s linear infinite",
+        Toggle: "Toggle 2s linear ",
       },
       colors: {
         background: "var(--background)",

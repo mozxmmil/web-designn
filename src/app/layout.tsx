@@ -5,9 +5,11 @@ import "./globals.css";
 const Monument = localFont({
   src: "./fonts/Monument-B.ttf",
   variable: "--Monument",
-  
 });
-
+const monumentRegular = localFont({
+  src: "fonts/Monument-R.ttf",
+  variable: "--monumentRegular",
+});
 const Gilroy_M = localFont({
   src: "fonts/Gilroy-M.ttf",
   variable: "--Gilroy-M",
@@ -30,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${Monument.variable} ${Gilroy_M.variable} ${Gilroy_R.variable} antialiased`}
+        className={`${Monument.variable} ${Gilroy_M.variable} ${Gilroy_R.variable} ${monumentRegular.variable} antialiased`}
       >
         {children}
       </body>
