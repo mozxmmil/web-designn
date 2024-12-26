@@ -27,7 +27,7 @@ const page = () => {
         <AlphabetSlider />
         <ImageAndtextSection />
         <ThirdPage_HowerSection />
-        <div className="fourthPage w-full h-screen bg-yellow-50  border-black pt-[0.1px] ">
+        <div className="fourthPage w-full h-fit bg-yellow-50  border-black pt-[0.1px] ">
           <Slider3 />
         </div>
       </section>
