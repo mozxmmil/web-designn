@@ -5,8 +5,10 @@ export default function InnderDiv() {
   return (
     <div className="innterdiv  h-full w-full relative">
       <video
+        
         autoPlay
         muted
+        poster="https://images.unsplash.com/photo-1572411269446-52544abbdb20?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bW9kZWwlMjBwb3N0ZXJ8ZW58MHx8MHx8fDA%3D"
         loop
         className="w-full h-full object-cover"
         src="/Dior.mp4"

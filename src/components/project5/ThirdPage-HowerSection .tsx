@@ -5,8 +5,8 @@ import React from 'react'
 const ThirdPage_HowerSection  = () => {
   
   return (
-          <div className="thirdPage w-full md:h-fit  md:px-10 bg-red-300 relative mt-10 md:mt-0">
-          <h1 className="w-full  text-center font-monument md:text-6xl text-3xl md:mb-16 uppercase">
+          <div className="thirdPage w-full md:h-fit  md:px-10  relative mt-20 md:mt-0">
+          <h1 className="w-full  text-center font-monument md:text-6xl text-3xl md:mb-16 mb-5 uppercase">
             Update
           </h1>
           {HoverList.map((value, index) => (
@@ -19,7 +19,7 @@ const ThirdPage_HowerSection  = () => {
                   src={value.photo}
                   className="  object-cover "
                   fill
-                  quality={40}
+                  quality={30}
                   alt="note"
                 />
               </div>
@@ -28,7 +28,7 @@ const ThirdPage_HowerSection  = () => {
                 {value.name}
               </h1>
               <div className="0 w-1/2 font-medium md:text-5xl text-xl font-gilroy_M">
-                <h1 className="font-bold">{value.tag}</h1>
+                <h1 className="md:font-bold font-semibold">{value.tag}</h1>
                 <h5 className="text-sm">{value.date}</h5>
               </div>
             </div>

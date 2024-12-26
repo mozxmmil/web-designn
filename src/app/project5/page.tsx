@@ -1,12 +1,19 @@
-import AlphabetSlider from "@/components/project5/AlphabetSlider";
-import ImageAndtextSection from "@/components/project5/ImageAndtextSection";
-import InnderDiv from "@/components/project5/InnderDiv";
-import NavBar from "@/components/project5/NavBar";
-import ThirdPage_HowerSection from "@/components/project5/ThirdPage-HowerSection ";
-import Slider2 from "@/components/Slider2";
-import Slider3 from "@/components/Slider3";
-
 import React from "react";
+import dynamic from "next/dynamic";
+const AlphabetSlider = dynamic(
+  () => import("@/components/project5/AlphabetSlider")
+);
+const ImageAndtextSection = dynamic(
+  () => import("@/components/project5/ImageAndtextSection")
+);
+const InnderDiv = dynamic(() => import("@/components/project5/InnderDiv"));
+const NavBar = dynamic(() => import("@/components/project5/NavBar"));
+const ThirdPage_HowerSection = dynamic(
+  () => import("@/components/project5/ThirdPage-HowerSection ")
+);
+const Slider2 = dynamic(() => import("@/components/Slider2"));
+const Slider3 = dynamic(() => import("@/components/Slider3"));
+
 
 const page = () => {
   return (
