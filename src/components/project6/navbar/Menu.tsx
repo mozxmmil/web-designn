@@ -34,7 +34,7 @@ export const Menu: React.FC<ManuProps> = ({ className, varient, size }) => {
           key={inx}
           href={val.link}
         >
-          <h1 className="text-lg whitespace-nowrap  transition-all ease-linear delay-100 group-hover:-translate-y-2 group-hover:scale-105 group-hover:font-semibold ">
+          <h1 className="text-lg whitespace-nowrap  transition-all ease-linear delay-0 group-hover:-translate-y-1 group-hover:scale-105 group-hover:font-semibold ">
             {val.name}
           </h1>
         </Link>
