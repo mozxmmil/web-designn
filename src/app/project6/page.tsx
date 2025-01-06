@@ -9,6 +9,8 @@ const Page = () => {
     <main className="w-full min-h-screen">
       <NavBar />
       <LandingPageComponent />
+      <div className="w-full h-screen bg-red-500">
+      </div>
     </main>
   );
 };

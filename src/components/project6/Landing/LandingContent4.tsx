@@ -19,7 +19,7 @@ interface Props
 const LandingContent4: React.FC<Props> = ({ variant, className }) => {
   return (
     <div className={twclx(LandingContent4Tw({ variant, className }))}>
-      <Button>start hiring today</Button>
+      <Button>Start hiring today</Button>
     </div>
   );
 };
