@@ -84,8 +84,19 @@ export default {
             transform: "translateX(0%)",
           },
         },
+        HowerAnimation: {
+          "0%": {
+            bottom: "-5%",
+            
+          },
+          "100%": {
+            bottom: "0%",
+            
+          },
+        },
       },
       animation: {
+        HowerAnimation:"HowerAnimation .3s linear ",
         nope: "rotate ",
         slider: "slider 10s linear infinite",
         slider1: "slider1 10s linear infinite",

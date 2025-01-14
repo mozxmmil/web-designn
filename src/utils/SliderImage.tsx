@@ -20,7 +20,6 @@ export const ImageSlider: ImageSlider[] = [
   {
     url: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8TW9kZWwlMjBkcCUyMGltYWdlfGVufDB8fDB8fHww",
   },
-  
 ];
 
 type AlphabetLetter =
@@ -115,5 +114,58 @@ export const HoverList: HoverImage[] = [
       "https://images.unsplash.com/photo-1632525230528-ec17c49bc168?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGV4Y2x1c2l2ZSUyMGZhc2hpb258ZW58MHx8MHx8fDA%3D",
     tag: "Khadimm & Son",
     date: "10 Oct 2015",
+  },
+];
+
+export interface HoverCard {
+  name: string;
+  photo: string;
+}
+
+export const HoverCardList:HoverCard[] = [
+  {
+    name: "Women fashion",
+    photo:
+      "https://plus.unsplash.com/premium_photo-1682095661711-f5d67d0e75a9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8d29tZW4lMjBtb2RlbHxlbnwwfHwwfHx8MA%3D%3D",
+  },
+  {
+    name: "Men fashion",
+    photo:
+      "https://images.unsplash.com/photo-1515907467242-93cd67ebc7d6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bWFsZSUyMG1vZGVsfGVufDB8fDB8fHww",
+  },
+  {
+    name: "Pet fashion",
+    photo:
+      "https://images.unsplash.com/photo-1517423568366-8b83523034fd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHBldCUyMGZhc2hpb258ZW58MHx8MHx8fDA%3D",
+  },
+  {
+    name: "Women fashion",
+    photo:
+      "https://plus.unsplash.com/premium_photo-1682095661711-f5d67d0e75a9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8d29tZW4lMjBtb2RlbHxlbnwwfHwwfHx8MA%3D%3D",
+  },
+  {
+    name: "Men fashion",
+    photo:
+      "https://images.unsplash.com/photo-1515907467242-93cd67ebc7d6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bWFsZSUyMG1vZGVsfGVufDB8fDB8fHww",
+  },
+  {
+    name: "Pet fashion",
+    photo:
+      "https://images.unsplash.com/photo-1517423568366-8b83523034fd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHBldCUyMGZhc2hpb258ZW58MHx8MHx8fDA%3D",
+  },
+  {
+    name: "Women fashion",
+    photo:
+      "https://plus.unsplash.com/premium_photo-1682095661711-f5d67d0e75a9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8d29tZW4lMjBtb2RlbHxlbnwwfHwwfHx8MA%3D%3D",
+  },
+  {
+    name: "Men fashion",
+    photo:
+      "https://images.unsplash.com/photo-1515907467242-93cd67ebc7d6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bWFsZSUyMG1vZGVsfGVufDB8fDB8fHww",
+  },
+  {
+    name: "Pet fashion",
+    photo:
+      "https://images.unsplash.com/photo-1517423568366-8b83523034fd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHBldCUyMGZhc2hpb258ZW58MHx8MHx8fDA%3D",
   },
 ];
