@@ -1,6 +1,17 @@
 interface ImageSlider {
   url: string;
 }
+export const LandingpageImage: ImageSlider[] = [
+  {
+    url: "https://plus.unsplash.com/premium_photo-1669704098750-7cd22c35422b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bW9kZWx8ZW58MHx8MHx8fDA%3D",
+  },
+  {
+    url: "https://images.unsplash.com/photo-1648270694882-a89bf37abd37?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bWVuJTIwbW9kZWx8ZW58MHx8MHx8fDA%3D",
+  },
+  {
+    url: "https://plus.unsplash.com/premium_photo-1670948083554-dde9411f3d1c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8bWVuJTIwbW9kZWx8ZW58MHx8MHx8fDA%3D",
+  },
+];
 export const ImageSlider: ImageSlider[] = [
   {
     url: "https://images.unsplash.com/photo-1503342394128-c104d54dba01?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fE1vZGVsJTIwZHAlMjBpbWFnZXxlbnwwfHwwfHx8MA%3D%3D",
@@ -122,7 +133,7 @@ export interface HoverCard {
   photo: string;
 }
 
-export const HoverCardList:HoverCard[] = [
+export const HoverCardList: HoverCard[] = [
   {
     name: "Women fashion",
     photo:
