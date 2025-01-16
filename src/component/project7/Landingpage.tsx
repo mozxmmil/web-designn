@@ -1,5 +1,5 @@
 "use client";
-import useGsapNav from "@/hook/useGsapNav";
+import { GsapLandingImage, useGsapLanding } from "@/hook/useGsapNav";
 import { LandingpageImage } from "@/utils/SliderImage";
 import { twclx } from "@/utils/TailwindUtils";
 import Image from "next/image";
@@ -13,11 +13,14 @@ export const Landingpage: React.FC<Props> = ({ className }) => {
   const im = useRef<HTMLHeadingElement>(null);
   const name = useRef<HTMLHeadingElement>(null);
   const web = useRef<HTMLHeadingElement>(null);
+  const imageRef = useRef<(HTMLDivElement | null)[]>([]);
+  // console.log(imageRef.current);
+  // console.log(web.current)
+  // todo kal animation ka dekhna hia kaise krena hai fix bug
+  console.log(imageRef);
+  useGsapLanding([im, name, web]);
 
-// todo kal animation ka dekhna hia kaise krena hai fix bug
-
-  useGsapNav([im, name, web]);
-
+  GsapLandingImage(imageRef.current);
   return (
     <div
       className={twclx(
@@ -39,24 +42,19 @@ export const Landingpage: React.FC<Props> = ({ className }) => {
         </div>
 
         {LandingpageImage.map((img, inx) => {
-          const angle = (inx % 2 === 0 ? 1 : -1) * (inx * 5); // Har card ke liye unique rotation value
-
-          // Debug karne ke liye
+           // Har card ke liye unique rotation value
 
           return (
             <div
-            style={
-                    {
-                      transform: `rotate(${angle}deg)`,
-                      transition: "transform 0.5s ease",
-                    }
-            }
+              ref={(refelem) => {
+                if (refelem) imageRef.current[inx] = refelem;
+              }}
               key={inx}
               className={twclx(
-                `absolute top-0 left-1/2 h-80 w-44 overflow-hidden rounded-xl`
+                `absolute top-0 left-1/2 h-80 w-44 overflow-hidden rounded-xl opacity-0 `
               )}
             >
-              <Image src={img.url} alt="hero" fill className="object-cover" />
+              <Image src={img.url} alt="hero" fill className="object-cover" sizes="fill" />
             </div>
           );
         })}

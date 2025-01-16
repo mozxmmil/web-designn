@@ -2,7 +2,7 @@
 import React from "react";
 import { Contact, Gallery, Instagram, Logo } from "./NavItem";
 import { useRef } from "react";
-import useGsapNav from "@/hook/useGsapNav";
+import { useGsapNav } from "@/hook/useGsapNav";
 
 const Nav = () => {
   const logo = useRef<HTMLDivElement>(null);
