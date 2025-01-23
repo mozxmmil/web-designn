@@ -54,7 +54,7 @@ export const Landingpage: React.FC<Props> = ({ className }) => {
                 `absolute top-0 left-1/2 h-80 w-44 overflow-hidden rounded-xl opacity-0 `
               )}
             >
-              <Image src={img.url} alt="hero" fill className="object-cover" sizes="fill" />
+              <Image src={img.url} alt="hero" fill className="object-cover" sizes="fi" />
             </div>
           );
         })}
