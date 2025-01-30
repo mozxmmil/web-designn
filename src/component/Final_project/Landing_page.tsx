@@ -3,8 +3,9 @@ import { cva, VariantProps } from "class-variance-authority";
 import React, { forwardRef, HTMLAttributes } from "react";
 import NavBar from "./NavBar";
 import MainLanding_page from "./MainLanding_page";
+import MainLanding_page_2 from "./MainLanding_page_2";
 
-const Landing_pageTW = cva("h-screen w-full ", {
+const Landing_pageTW = cva(" w-full ", {
   variants: {
     variant: {
       default: "bg-black",
@@ -28,6 +29,7 @@ const Landing_page = forwardRef<HTMLDivElement, Props>(
     >
       <NavBar />
       <MainLanding_page />
+      <MainLanding_page_2/>
     </section>
   )
 );

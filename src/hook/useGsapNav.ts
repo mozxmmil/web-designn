@@ -84,6 +84,7 @@ export function useGsapLandingImage({ refs, htmlDiv, now, page }: Props) {
       duration: 1,
       delay: 0.5,
       ease: "power1.out",
+      fontWeight: "2px",
     });
     htmlDiv.forEach((ref) => {
       if (ref.current) {
@@ -116,17 +117,20 @@ export function useGsapLadingText(refs: RefObject<HTMLDivElement | null>[]) {
     });
   });
 }
-export function useCoursor(
-  refs: RefObject<HTMLDivElement | null>,
-  mouseEvent: MouseEvent
-) {
-  useGSAP(() => {
-    gsap.to(refs.current, {
-      x: mouseEvent.clientX,
-      y: mouseEvent.clientY,
 
-      duration: 0.5,
-      ease: "power1.out",
-    });
+export function useCoursor(cour: RefObject<HTMLDivElement | null>) {
+  useGSAP(() => {
+    const handleMouse = (e: MouseEvent) => {
+      if (cour.current) {
+        gsap.to(cour.current, {
+          x: e.clientX,
+          y: e.clientY,
+        });
+
+      }
+    };
+
+    window.addEventListener("mousemove", handleMouse);
+    return () => window.removeEventListener("mousemove", handleMouse);
   });
 }

@@ -18,8 +18,10 @@ const MainLanding_page = () => {
         <div className="overflow-hidden">
           <h1 ref={h2}>unique</h1>
         </div>
-        <div className="overflow-hidden">
-          <h1 ref={h3}>web/graphic</h1>
+        
+        <div className="overflow-hidden relative after:content-[''] after:w-full after:h-3 after:bg-white after:block  hover:text-stroke hover:text-transparent transition-all duration-300 ease-linear">
+          <h1 ref={h3} className="">Web/Graphic</h1>
+
         </div>
         <div className="overflow-hidden">
           <h1 ref={h4}>experience</h1>
