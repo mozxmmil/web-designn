@@ -19,9 +19,9 @@ const Thumbnali_video_card = forwardRef<HTMLDivElement, props>(
     const circle = useRef<HTMLDivElement | null>(null);
     const video = useRef<HTMLVideoElement | null>(null);
 
-    const element = div.current;
     useEffect(() => {
-      if (!element) return;
+      const element = div.current;
+      if (!element || !circle.current) return;
       const xto = gsap.quickTo(circle.current, "x");
       const yto = gsap.quickTo(circle.current, "y");
       const circleSize = 80 / 2;
@@ -38,14 +38,12 @@ const Thumbnali_video_card = forwardRef<HTMLDivElement, props>(
         yto(0);
       };
       const clickFunction = () => {
-        console.log("clicked")
+        console.log("clicked");
         if (video.current) {
           if (video.current.paused) {
             video.current.play();
-            
           } else {
             video.current.pause();
-            
           }
           setPlay((prev) => !prev);
         }
@@ -57,9 +55,9 @@ const Thumbnali_video_card = forwardRef<HTMLDivElement, props>(
       return () => {
         element.removeEventListener("mousemove", mouseMove);
         element.removeEventListener("mouseleave", mouseLeave);
-        element.removeEventListener("click", clickFunction);
+        // element.removeEventListener("click", clickFunction);
       };
-    },[video.current]);
+    }, []);
 
     return (
       <div
